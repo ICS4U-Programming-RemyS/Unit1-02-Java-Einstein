@@ -14,7 +14,7 @@ final class Einstein {
     /**.
     * SPEED_OF_LIGHT as a double constant
     **/
-    private static final double SPEED_OF_LIGHT = 299792458;
+    private static final long SPEED_OF_LIGHT = 299792458L;
 
 
     /**
@@ -78,8 +78,10 @@ final class Einstein {
         System.out.print("The energy released from ");
         System.out.format(" %.3f", +massAsDouble);
         System.out.print("kg of mass is: ");
-        System.out.format(" %.3f", +energyInJoules);
+        // % .3e is scientific notation with 3 decimal places
+        System.out.format(" %.3e", +energyInJoules);
         System.out.println("J");
+
     // Close scanner
     scanner.close();
     }
