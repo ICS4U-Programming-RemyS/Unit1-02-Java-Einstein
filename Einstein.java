@@ -48,7 +48,7 @@ final class Einstein {
         do {
             // Message for input
             System.out.println("Please enter the"
-                    + "mass you will be using in kg: ");
+                    + " mass you will be using in kg: ");
             // Get the mass as a string
             String massAsString = scanner.nextLine();
 
