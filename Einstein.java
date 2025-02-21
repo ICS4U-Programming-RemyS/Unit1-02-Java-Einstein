@@ -12,7 +12,7 @@ import java.util.Scanner;
 
 final class Einstein {
     /**.
-    * SPEED_OF_LIGHT as a double constant
+    * SPEED_OF_LIGHT as a long constant
     **/
     private static final long SPEED_OF_LIGHT = 299792458L;
 
@@ -35,7 +35,8 @@ final class Einstein {
     */
     public static void main(final String[] args) {
         // Welcome message
-        System.out.println("This program will calculate the energy released based on mass.");
+        System.out.println("This program will calculate"
+                + " the energy released based on mass.");
 
         // Use a scanner to get the mass from the user
         Scanner scanner = new Scanner(System.in);
@@ -46,7 +47,8 @@ final class Einstein {
         // Do while loop to run until valid mass is entered
         do {
             // Message for input
-            System.out.println("Please enter the mass you will be using in kg: ");
+            System.out.println("Please enter the"
+                    + "mass you will be using in kg: ");
             // Get the mass as a string
             String massAsString = scanner.nextLine();
 
@@ -71,15 +73,16 @@ final class Einstein {
         // While True for infinite loop until break
         } while (true);
 
-        // Calculate the weight per log
-        final double energyInJoules = massAsDouble * Math.pow(SPEED_OF_LIGHT, 2);
+        // Calculate the energy in joules
+        final double energyInJoules = massAsDouble
+                * Math.pow(SPEED_OF_LIGHT, 2);
 
-        // Display the max number of logs
+        // Display the energy in joules
         System.out.print("The energy released from ");
-        System.out.format(" %.3f", +massAsDouble);
+        System.out.format(" %.3f", massAsDouble);
         System.out.print("kg of mass is: ");
         // % .3e is scientific notation with 3 decimal places
-        System.out.format(" %.3e", +energyInJoules);
+        System.out.format(" %.3e", energyInJoules);
         System.out.println("J");
 
     // Close scanner
